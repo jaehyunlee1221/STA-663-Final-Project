@@ -30,7 +30,7 @@ def svd(X):
     return np.linalg.svd(X)
  
 @njit(parallel = True)
-def ssvd_opt(X,param=None):
+def ssvd_opt(X,niter=100):
     n, d = X.shape
     ttypu = 1; ttypv = 1
     gamu = 0; gamv = 0
@@ -38,7 +38,6 @@ def ssvd_opt(X,param=None):
     v = v.T
     u0 = u[:,0]; v0 = v[:,0]
     tol = 1e-4
-    niter = 100
     ud = 1;vd = 1
     SST = np.sum(X**2)
     for iters in prange(niter):
