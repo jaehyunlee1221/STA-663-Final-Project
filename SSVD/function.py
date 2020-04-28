@@ -30,7 +30,7 @@ def svd(X):
     return np.linalg.svd(X)
  
 @njit(parallel = True)
-def ssvd_opt(X,niter=100):
+def ssvd_opt(X, niter = 100):
     n, d = X.shape
     ttypu = 1; ttypv = 1
     gamu = 0; gamv = 0
@@ -79,4 +79,4 @@ def ssvd_opt(X,niter=100):
         v0 = v1
     u = u1
     v = v1
-    return u,v,iters
+    return u,s[0],v,iters
