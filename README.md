@@ -15,9 +15,9 @@ X - data matrix which has much more columns than rows
 
 niter - Number of max iteration
 
-output: u,v,iters  
+output: u,s,v,iters  
 
-u,v - Decomposed singular vector with adaptive lasso penalty which corresponds to best rank 1 approximation matrix X*  = s*u@v.T.
+u,s,v - Decomposed singular value and singular vectors with adaptive lasso penalty which corresponds to best rank 1 approximation matrix X*  = s*u@v.T.
         
 iters - number of iteration before convergence.
 
