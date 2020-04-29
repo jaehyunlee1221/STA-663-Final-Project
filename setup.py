@@ -18,8 +18,8 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    data_files=[('my_data', ['data/BreastCancerData.txt', 
-                       'data/BreastCancerLabels.txt',
-                       'data/LungCancerData.txt'])],
+    data_files=[('my_data', ['data/breast_cancer.txt', 
+                       'data/lung_cancer.txt',
+                       'data/ssvd_results.txt'])],
     python_requires='>=3.6',
 )
