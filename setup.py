@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="STA-663-Final-Project-SSVD", # Replace with your own username
-    version="0.0.2",
+    version="0.0.3",
     author="Jae Hyun Lee, Jingxuan Zhang",
     author_email="jaehyun.lee@duke.edu, jingxuan.zhang@duke.edu",
     description="Optimized Sparse Singular Value Decomposition with Numba",
