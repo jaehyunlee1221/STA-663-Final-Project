@@ -9,7 +9,7 @@ def biclusterplot(u,s,v,ax,title = "title"):
     X = s*np.outer(u,v)
     sns.heatmap(X, cmap ="RdBu",vmin = -1,vmax = 1, ax = ax).set_title(title)
 
-X = np.loadtxt("data/lung_cancer.txt")
+X = np.loadtxt("../data/lung_cancer.txt")
 
 u1,s1,v1,iters = ssvd_opt(X)
 X_r1 = X-s1*np.outer(u1,v1)
