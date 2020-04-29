@@ -1,0 +1,21 @@
+from SSVD import ssvd_opt
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+X = pd.read_table("data/breast_cancer.txt").drop(["CLID","NAME"],axis = 1)
+X = np.array(X).T
+X = np.ma.masked_invalid(X)
+X = X.filled(0)
+
+def biclusterplot(u,s,v,ax,title = "title"):
+    u = np.sort(u)/np.max(np.abs(u))
+    v = np.sort(v)/np.max(np.abs(v))
+    X = s*np.outer(u,v)
+    sns.heatmap(X, cmap ="RdBu",vmin = -1,vmax = 1, ax = ax).set_title(title)
+   
+u1,s1,v1,iters = ssvd_opt(X, niter = 200)
+X_r1 = X-s1*np.outer(u1,v1)
+u2,s2,v2,iters = ssvd_opt(X_r1)
+X_r2 = X_r1 - s1*np.outer(u2,v2)
+u3,s3,v3,iters = ssvd_opt(X_r2)
