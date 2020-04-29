@@ -1,0 +1,8 @@
+include README.md
+
+include LICENSE.txt
+
+recursive-include data *
+
+include Biclustering via Sparse Singular Value Decomposition.html
+include Biclustering via Sparse Singular Value Decomposition.ipynb
