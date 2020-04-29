@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
-X = pd.read_table("data/breast_cancer.txt").drop(["CLID","NAME"],axis = 1)
+X = pd.read_table("../data/breast_cancer.txt").drop(["CLID","NAME"],axis = 1)
 X = np.array(X).T
 X = np.ma.masked_invalid(X)
 X = X.filled(0)
