@@ -2,6 +2,7 @@ from SSVD import ssvd_opt
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import pandas as pd
 
 X = pd.read_table("../data/breast_cancer.txt").drop(["CLID","NAME"],axis = 1)
 X = np.array(X).T
