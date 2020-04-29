@@ -11,7 +11,7 @@ setuptools.setup(
     description="Optimized Sparse Singular Value Decomposition with Numba",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/jaehyunlee1221/STA-663-Final-Project",
+    url="https://github.com/jaehyunlee1221/STA-663-Final-Project/SSVD",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
